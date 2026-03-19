@@ -1,101 +1,101 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galerie – Reiterhof Hausdorf</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Hausdorf</a>
-      <div class="nav-links">
-        <a href="index.html">Startseite</a>
-        <a href="products.html">Produkte</a>
-        <a href="angebote.html">Angebote</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galerie – Reiterhof Hausdorf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">Hausdorf</a>
+        <div class="nav-links">
+          <a href="index.html">Startseite</a>
+          <a href="products.html">Produkte</a>
+          <a href="angebote.html">Angebote</a>
+        </div>
       </div>
+    </nav>
+
+    <main class="page">
+      <h1>Unsere Reitanlage</h1><br />
+      <p class="intro">
+        Ein Blick in unsere Bewegungshalle, Ställe und Freizeitanlagen
+      </p>
+
+      <div class="gallery">
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image006.jpg" alt="Halle von Außen" />
+          <div class="overlay">Halle von Außen</div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image001.jpg" alt="Offenstall" />
+          <div class="overlay">Offenstall</div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image012.jpg" alt="Innenanlage" />
+          <div class="overlay">Innenanlage</div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image017.jpg" alt="Innenansicht" />
+          <div class="overlay">Innenansicht</div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image016.jpg" alt="Halle bei Sonnenuntergang" />
+          <div class="overlay">Halle bei Sonnenuntergang</div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image020.jpg" alt="Eine der großen Wiesen" />
+          <div class="overlay">Eine der großen Wiesen</div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image019.jpg" alt="Reitunterricht" />
+          <div class="overlay">Reitunterricht</div>
+        </div>
+        <div class="gallery-item" onclick="openModal(this)">
+          <img src="img/image045.jpg" alt="Springplatz" />
+          <div class="overlay">Springplatz</div>
+        </div>
+      </div>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" />
+      <div id="caption"></div>
     </div>
-  </nav>
 
-  <main class="page">
-    <h1>Unsere Reitanlage</h1>
-    <p class="intro">Ein Blick in unsere Bewegungshalle, Ställe und Freizeitanlagen</p>
+    <footer>
+      <p>&copy; 2026 Reiterhof Hausdorf GmbH. Alle Rechte vorbehalten.</p>
+      <div class="footer-links">
+        <a href="imprint.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </footer>
 
-    <div class="gallery">
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image006.jpg" alt="Halle von Außen" />
-        <div class="overlay">Halle von Außen</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image001.jpg" alt="Offenstall" />
-        <div class="overlay">Offenstall</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image012.jpg" alt="Innenanlage" />
-        <div class="overlay">Innenanlage</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image017.jpg" alt="Innenansicht" />
-        <div class="overlay">Innenansicht</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image016.jpg" alt="Halle bei Sonnenuntergang" />
-        <div class="overlay">Halle bei Sonnenuntergang</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image020.jpg" alt="Eine der großen Wiesen" />
-        <div class="overlay">Eine der großen Wiesen</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image018.jpg" alt="Pferde auf Wiese" />
-        <div class="overlay">Pferde auf Wiese</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image019.jpg" alt="Reitunterricht" />
-        <div class="overlay">Reitunterricht</div>
-      </div>
-      <div class="gallery-item" onclick="openModal(this)">
-        <img src="img/image045.jpg" alt="Springplatz" />
-        <div class="overlay">Springplatz</div>
-      </div>
-    </div>
-  </main>
+    <script>
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      const captionText = document.getElementById("caption");
 
-  <div id="modal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modal-img" />
-    <div id="caption"></div>
-  </div>
+      function openModal(element) {
+        const img = element.querySelector("img");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+      }
 
-  <footer>
-    <p>&copy; 2026 Reiterhof Hausdorf GmbH. Alle Rechte vorbehalten.</p>
-    <div class="footer-links">
-      <a href="imprint.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="contact.html">Kontakt</a>
-    </div>
-  </footer>
-
-  <script>
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-img");
-    const captionText = document.getElementById("caption");
-
-    function openModal(element) {
-      const img = element.querySelector('img');
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-      captionText.innerHTML = img.alt;
-    }
-
-    function closeModal() {
-      modal.style.display = "none";
-    }
-  </script>
-</body>
+      function closeModal() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
 </html>
