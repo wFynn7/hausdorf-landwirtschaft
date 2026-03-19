@@ -5,31 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reiterhof Hausdorf</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
 
   <body>
     <nav class="navbar">
       <div class="nav-container">
         <a href="index.html" class="nav-logo">Hausdorf</a>
-        <div class="nav-links"></div>
+        <div class="nav-links">
+          <a href="products.html">Produkte</a>
+          <a href="angebote.html">Angebote</a>
+          <a href="gallery.html">Galerie</a>
+        </div>
       </div>
     </nav> 
 
     <main class="oben">
-      <div class="container">
+      <div class="container main-header fade-in">
         <header class="hero">
           <h1>Nicole Hausdorf – Gemischte Landwirtschaft</h1>
           <p><strong>im Holsteiner Auenland, Großenaspe-Brokenlande</strong></p>
         </header>
 
         <section class="sections">
-          <a href="products.html" class="box">Produkte</a>
-          <a href="angebote.html" class="box">Angebote</a>
-          <a href="gallery.html" class="box">Unsere Reitanlage<br />(Fotos)</a>
+          <!-- Hier nutzen wir jetzt deine vorbereiteten Fancy-Klassen -->
+          <a href="products.html" class="big-section-card fade-in delay-1">
+            <div class="card-content">
+              <div class="emoji"></div>
+              <h2 class="btn-text">Produkte</h2>
+            </div>
+          </a>
+          
+          <a href="angebote.html" class="big-section-card fade-in delay-2">
+            <div class="card-content">
+              <div class="emoji"></div>
+              <h2 class="btn-text">Angebote</h2>
+            </div>
+          </a>
+          
+          <a href="gallery.html" class="big-section-card fade-in delay-3">
+            <div class="card-content">
+              <div class="emoji"></div>
+              <h2 class="btn-text">Unsere Reitanlage</h2>
+            </div>
+          </a>
         </section>
       </div>
     </main>
@@ -37,10 +56,33 @@
     <footer>
       <p>&copy; 2026 Reiterhof Hausdorf GmbH. Alle Rechte vorbehalten.</p>
       <div class="footer-links">
-        <a href="imprint.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="imprint.html">Impressum</a> <span class="footer-divider">|</span>
+        <a href="datenschutz.html">Datenschutz</a> <span class="footer-divider">|</span>
         <a href="contact.html">Kontakt</a>
       </div>
     </footer>
+
+ 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target); 
+          });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+          appearOnScroll.observe(fader);
+        });
+      });
+    </script>
   </body>
 </html>
